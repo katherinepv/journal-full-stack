@@ -1,8 +1,9 @@
 import './App.scss';
+import TimeLine from './pages/TimeLine/TimeLine';
 
 const App = () => {
   return (
-    <h1>Hello world</h1>
+    <TimeLine/>
   );
 }
 
