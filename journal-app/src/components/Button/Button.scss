@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.button {
+    position: fixed;
+    bottom: 12vh;
+    right: 3vw;
+    background-color: $text-green;
+    padding: 0.5rem;
+    color: $background-whitesmoke;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
