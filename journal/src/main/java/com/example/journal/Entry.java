@@ -1,12 +1,20 @@
 package com.example.journal;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 import java.util.Random;
 
+@Entity
 public class Entry {
 
     // instance variables
-    private long id = new Random().nextLong();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private LocalDate dateCreated = LocalDate.now();
     private String entry;
     private String location;
@@ -16,7 +24,7 @@ public class Entry {
     public Entry() {
     }
 
-    public Entry(Long id,LocalDate dateCreated, String entry, String location, String mood) {
+    public Entry(Long id, LocalDate dateCreated, String entry, String location, String mood) {
         this.id = id;
         this.dateCreated = dateCreated;
         this.entry = entry;
