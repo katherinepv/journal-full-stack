@@ -2,6 +2,7 @@ import TimeLineEntry from "../../components/TimeLineEntry/TimeLineEntry";
 import "./TimeLine.scss";
 import Layout from "../../components/Layout/Layout";
 import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 const TimeLine = () => {
   const title = "User's Journal";
@@ -14,7 +15,9 @@ const TimeLine = () => {
         <TimeLineEntry />
         <TimeLineEntry />
         <TimeLineEntry />
-        <Button buttonText={buttonText} />
+        <Link to="/new">
+          <Button buttonText={buttonText} />
+        </Link>
       </div>
     </Layout>
   );
