@@ -11,7 +11,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000")
 public class EntriesController {
 
-    @Autowired
+    @Autowired(required = true)
     private EntriesService entriesService;
 
     @ExceptionHandler
