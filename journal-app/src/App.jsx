@@ -11,7 +11,8 @@ const App = () => {
       <Routes>
         <Route path="*" element={<TimeLine />} />
         <Route path="/new" element={<CreateEntry />} />
-        <Route path="/edit/:id" element={<ViewEntry />} />
+        <Route path="/entry/:id" element={<ViewEntry />} />
+
         <Route path="/quote" element={<Quote />} />
       </Routes>
     </Router>
