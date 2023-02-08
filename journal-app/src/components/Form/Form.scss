@@ -1,0 +1,23 @@
+.form-container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    &__input,
+    &__button {
+        margin: 1rem;
+    }
+
+
+}
