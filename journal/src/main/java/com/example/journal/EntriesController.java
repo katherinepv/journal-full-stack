@@ -51,6 +51,4 @@ public class EntriesController {
         entriesService.deleteEntryById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-
-
 }
