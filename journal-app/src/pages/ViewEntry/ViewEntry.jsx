@@ -39,13 +39,21 @@ const ViewEntry = () => {
     }
   };
 
+  if (!entry) return <p>loading...</p>;
+
   return (
-    <>
-      <Link to={`/edit/:${entry.id}`}>
+    <div className="view-entry">
+      <Link to={`/update/:${entry.id}`}>
         <p>Edit</p>
       </Link>
       <button onClick={handleDeleteEntry}>Delete</button>
-    </>
+      <div className="entry">
+      <h2 className="entry__date">{entry.dateCreated}</h2>
+      <p className="entry__text">{entry.entry}</p>
+      <p className="entry__location">Location: {entry.location}</p>
+      <p className="entry__mood">Today's mood: {entry.mood}</p>
+    </div>
+      </div>
   );
 };
 export default ViewEntry;
