@@ -1,10 +1,9 @@
-import Entry from "../../components/Entry/Entry";
 import "./TimeLine.scss";
 import Layout from "../../components/Layout/Layout";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import EntriesList from "../../components/EntriesList/EntriesList";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const TimeLine = () => {
   const [entries, setEntries] = useState([]);
