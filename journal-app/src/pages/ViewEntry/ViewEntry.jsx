@@ -43,7 +43,7 @@ const ViewEntry = () => {
 
   return (
     <div className="view-entry">
-      <Link to={`/update/:${entry.id}`}>
+      <Link to={`/update/${entry.id}`}>
         <p>Edit</p>
       </Link>
       <button onClick={handleDeleteEntry}>Delete</button>

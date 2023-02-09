@@ -1,7 +1,6 @@
 import "./Entry.scss";
 
 const Entry = ({ entry }) => {
-  console.log(entry)
   return (
     <div className="entry">
       <h2 className="entry__date">{entry.dateCreated}</h2>
