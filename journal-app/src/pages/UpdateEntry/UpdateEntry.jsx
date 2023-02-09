@@ -7,7 +7,7 @@ import { useParams} from "react-router-dom";
 const UpdateEntry = () => {
   const { id } = useParams();
   const [entry, setEntry] = useState(null);
-
+ 
   const getEntryById = async (id) => {
     const response = await fetch(`http://localhost:8080/entry/${id}`);
     const entryData = await response.json();
@@ -36,8 +36,6 @@ const UpdateEntry = () => {
       alert(message);
     }
   };
-
-  console.log(entry);
 
   if (!entry) return <p>loading...</p>;
 

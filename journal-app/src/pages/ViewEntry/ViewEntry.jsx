@@ -6,6 +6,9 @@ import "./ViewEntry.scss";
 const ViewEntry = () => {
   const { id } = useParams();
   const [entry, setEntry] = useState(null);
+  const [showDelete, setShowDelete] = useState(false);
+
+
   const navigate = useNavigate();
 
   // get entry
@@ -20,9 +23,20 @@ const ViewEntry = () => {
     getEntryById(id);
   }, [id]);
 
+  // for 2 step delete process
+
+const handleClick = () => {
+  setShowDelete(!showDelete);
+}
+
+const showDeletePane = () => {
+  setShowDelete(true);
+}
+
+
   // delete entry
 
-  const handleDeleteEntry = async () => {
+  async function handleDeleteEntry() {
     const result = await fetch(`http://localhost:8080/entry/${id}`, {
       method: "DELETE",
       headers: {
@@ -37,7 +51,7 @@ const ViewEntry = () => {
       const message = await result.text();
       alert(message);
     }
-  };
+  }
 
   if (!entry) return <p>loading...</p>;
 
@@ -46,7 +60,14 @@ const ViewEntry = () => {
       <Link to={`/update/${entry.id}`}>
         <p>Edit</p>
       </Link>
-      <button onClick={handleDeleteEntry}>Delete</button>
+      <button onClick={showDelete}>Delete</button>
+
+      {showDelete && <div className="delete-popup">
+    <h3>Delete this entry?</h3>
+    <button onClick={handleClick}>Cancel</button>
+    <button onClick={handleDeleteEntry}>Delete</button>
+   </div>}
+      
       <div className="entry">
       <h2 className="entry__date">{entry.dateCreated}</h2>
       <p className="entry__text">{entry.entry}</p>
