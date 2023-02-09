@@ -1,0 +1,19 @@
+.delete-popup {
+    position: absolute;
+    // top:50%;
+    // left:50%;
+    // margin: 0;
+    // width: 90vh;
+    // height: 20vh;
+    background-color: rgb(223, 130, 77);
+    z-index: 2;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: center;
+    
+
+
+    button{
+        margin: 0.5rem 0.25rem;
+    }
+}

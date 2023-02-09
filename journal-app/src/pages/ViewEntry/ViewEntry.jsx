@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import ConfirmDeletePane from "../../components/ConfirmDeletePane/ConfirmDeletePane";
 
 import "./ViewEntry.scss";
 
@@ -25,14 +26,13 @@ const ViewEntry = () => {
 
   // for 2 step delete process
 
-const handleClick = () => {
-  setShowDelete(!showDelete);
-}
+  const handleClick = () => {
+    setShowDelete(!showDelete);
+  }
 
-const showDeletePane = () => {
-  setShowDelete(true);
-}
-
+  const showDeletePane = () => {
+    setShowDelete(true);
+  }
 
   // delete entry
 
@@ -60,21 +60,17 @@ const showDeletePane = () => {
       <Link to={`/update/${entry.id}`}>
         <p>Edit</p>
       </Link>
-      <button onClick={showDelete}>Delete</button>
+      <button onClick={showDeletePane}>Delete</button>
 
-      {showDelete && <div className="delete-popup">
-    <h3>Delete this entry?</h3>
-    <button onClick={handleClick}>Cancel</button>
-    <button onClick={handleDeleteEntry}>Delete</button>
-   </div>}
-      
+      {showDelete && <ConfirmDeletePane handleClick={handleClick} handleDeleteEntry={handleDeleteEntry} />}
+
       <div className="entry">
-      <h2 className="entry__date">{entry.dateCreated}</h2>
-      <p className="entry__text">{entry.entry}</p>
-      <p className="entry__location">Location: {entry.location}</p>
-      <p className="entry__mood">Today's mood: {entry.mood}</p>
-    </div>
+        <h2 className="entry__date">{entry.dateCreated}</h2>
+        <p className="entry__text">{entry.entry}</p>
+        <p className="entry__location">Location: {entry.location}</p>
+        <p className="entry__mood">Today's mood: {entry.mood}</p>
       </div>
+    </div>
   );
 };
 export default ViewEntry;
