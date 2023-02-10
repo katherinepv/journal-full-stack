@@ -9,17 +9,11 @@ const Layout = ({ title, children }) => {
         <img className="layout__img" src={User} alt="user" />
       </header>
       {children}
-      <footer className="layout__footer">
+      {/* <footer className="layout__footer">
         <h2>Timeline</h2>
         <h2>Quote of the Day</h2>
-      </footer>
+      </footer> */}
     </div>
   );
 };
 export default Layout;
-
-// const Layout = ({ children }) => {
-//   return <div className="layout">{children}</div>;
-// };
-
-// export default Layout;

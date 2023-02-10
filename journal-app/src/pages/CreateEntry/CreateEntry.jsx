@@ -1,6 +1,7 @@
 import "./CreateEntry.scss";
 import Form from "../../components/Form/Form";
 import { Link } from "react-router-dom";
+import Tick from "../../images/tick-sign.svg";
 
 const CreateEntry = () => {
   const handleSubmit = async (entry) => {
@@ -22,12 +23,12 @@ const CreateEntry = () => {
   return (
     <section className="create-entry">
       <Link to={"/*"}>
-        <button>Done</button>
+        <img className="create-entry__tick" src={Tick} alt="back button" />
       </Link>
       <Form
         handleSubmit={handleSubmit}
         defaultFormState={defaultFormState}
-        formTitle="Entry"
+        formTitle="New Entry"
       />
     </section>
   );

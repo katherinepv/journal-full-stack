@@ -1,4 +1,43 @@
-.view-entry{
-    background-color: rgb(73, 201, 158);
+@use "../../styles/variables" as *;
+
+.view-entry {
+    background-color: rgb(247, 236, 88);
     height: 100vh;
+    padding: 1rem;
+    width: 100vw;
+
+    &__arrow {
+        transform: rotate(180deg);
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        border-style: none;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    &__edit,
+    &__delete {
+        width: 8vh;
+        height: auto;
+        margin-left: 0.5rem;
+    }
+
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.25rem;
+        font-family: $font-tertiary;
+        font-size: larger;
+        color: $text-grey;
+    }
+
+    &__date {
+        font-family: $font-primary;
+        color: $text-green;
+    }
 }

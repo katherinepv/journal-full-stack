@@ -1,0 +1,10 @@
+@use "../../styles/variables" as *;
+.edit {
+background-color: $background-palepink;
+height: 100vh;
+padding: 1rem;
+
+&__arrow {
+    transform: rotate(180deg);
+}
+}

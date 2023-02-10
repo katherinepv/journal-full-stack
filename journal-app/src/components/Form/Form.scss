@@ -1,11 +1,18 @@
+@use "../../styles/variables" as *;
+
 .form-container {
-    margin: 1rem;
+
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    background-color: $background-palepink;
 
     &__title {
-        font-size: 1.5rem;
+        width: 100%;
+        font-size: 2rem;
+        font-family: $font-tertiary;
+        padding: 1rem;
+
     }
 
     &__form {
@@ -14,9 +21,32 @@
         padding: 1rem;
     }
 
+    input[type=text] {
+        background-color: rgb(238, 192, 238);
+        height: 3.5rem;
+        flex-flow: column wrap;
+        padding:0.5rem;
+        font-family: $font-tertiary;
+        color: $text-green;
+        font-size: 1.5rem;
+        border-style: none;
+        max-height: 50vh;
+    }
+
     &__input,
     &__button {
         margin: 1rem;
+    }
+
+    &__button {
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        width: 40%;
+        padding: 0.75rem;
+        align-self: center;
+        background-color: $background-green;
+        font-family: $font-tertiary;
+        color: $text-grey;
     }
 
 

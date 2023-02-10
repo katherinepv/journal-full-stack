@@ -1,19 +1,30 @@
+@use "../../styles/variables" as *;
+
 .delete-popup {
-    position: absolute;
-    // top:50%;
-    // left:50%;
-    // margin: 0;
-    // width: 90vh;
-    // height: 20vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -10rem;
+    margin-top: -10rem;
+    width: 20rem;
     background-color: rgb(223, 130, 77);
-    z-index: 2;
+    z-index: 3;
     border-radius: 2rem;
     padding: 1rem;
     text-align: center;
+    font-family: $font-tertiary;
+    color: $text-grey;
     
 
 
     button{
-        margin: 0.5rem 0.25rem;
+        margin: 0.75rem 0.25rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        background-color: $background-green;
+        color: $background-whitesmoke;
+        border-style: none;
+        font-size: medium;
+        font-family: $font-primary;
     }
 }

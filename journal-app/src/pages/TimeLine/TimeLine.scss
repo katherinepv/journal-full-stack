@@ -1,5 +1,4 @@
 @use "../../styles/variables" as *;
-// @use "../../styles/reset" as *;
 
 .timeline {
     height: 100vh;
@@ -7,4 +6,8 @@
     padding-bottom: 10vh;
     width: 100vw;
     background-color: $background-green;
+
+    button {
+        font-family: $font-tertiary;
+    }
 }

@@ -1,3 +1,10 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+$font-primary:'Abril Fatface', cursive;
+$font-secondary: 'Caveat', cursive;
+$font-tertiary: 'Rowdies', cursive;
 // breakpoints
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -10,3 +17,5 @@ $background-green: rgb(125, 206, 125);
 $background-whitesmoke: whitesmoke;
 $text-green: rgb(2, 82, 2);
 $text-grey: rgb(48, 48, 48);
+$background-palepink: rgb(238, 192, 238);
+

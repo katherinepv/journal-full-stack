@@ -1,7 +1,8 @@
 import "./UpdateEntry.scss";
 import Form from "../../components/Form/Form";
 import { useState, useEffect } from "react";
-import { useParams} from "react-router-dom";
+import { Link, useParams} from "react-router-dom";
+import Arrow from "../../images/arrow.svg";
 
 
 const UpdateEntry = () => {
@@ -40,7 +41,10 @@ const UpdateEntry = () => {
   if (!entry) return <p>loading...</p>;
 
   return <div className="edit">
-    <Form defaultFormState={entry} formTitle="Edit entry" handleSubmit={handleUpdateEntry}/>
+    <Link to={`/entry/${id}`}>
+    <img className="edit__arrow" src={Arrow} alt="back button" />
+    </Link>
+    <Form defaultFormState={entry} formTitle="Edit Entry" handleSubmit={handleUpdateEntry}/>
   </div>
 };
 

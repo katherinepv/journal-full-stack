@@ -13,6 +13,7 @@ const TimeLine = () => {
   const getEntries = async () => {
     const response = await fetch("http://localhost:8080/entries");
     const entriesData = await response.json();
+    entriesData.reverse();
     setEntries(entriesData);
   };
 

@@ -5,8 +5,8 @@
     width: 100vw;
 
     &__header {
-        padding: 0.5rem;
-        height: 10vh;
+        padding: 0.875rem;
+        height: 11vh;
         width: 100vw;
         position: fixed;
         top: 0;
@@ -14,25 +14,27 @@
         justify-content: space-between;
         align-items: center;
         background-color: $background-green;
-        color: $text-grey;
+        color:$text-green;
+        font-family: $font-primary;
+        font-size: medium;
     }
 
     &__img {
-        width: 13vw;
-        height: auto;
+        width: auto;
+        height: 6vh;
         // filter: invert(100%) sepia(1%) saturate(2282%) hue-rotate(210deg) brightness(108%) contrast(86%);
     }
 
-    &__footer {
-        padding: 0.5rem;
-        height: 10vh;
-        width: 100vw;
-        position: fixed;
-        bottom: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $background-green;
-        color: $text-grey;
-    }
+    // &__footer {
+    //     padding: 0.5rem;
+    //     height: 10vh;
+    //     width: 100vw;
+    //     position: fixed;
+    //     bottom: 0;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     background-color: $background-green;
+    //     color: $text-grey;
+    // }
 }

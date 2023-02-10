@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const EntriesList = ({ entries }) => {
   const entriesListJSX = entries.map((entry) => (
-    <Link key={entry.id} to={`/entry/${entry.id}`}>
+    <Link className="entries-list__link" key={entry.id} to={`/entry/${entry.id}`}>
       <Entry entry={entry} />{" "}
     </Link>
   ));
